@@ -1,0 +1,270 @@
+<style>
+    #banner img,.banner img{
+        width: 100%;
+    }
+    h1{
+        font-size: 32px;
+        padding: 0.53rem 0 0.48rem;
+        text-align: center;
+    }
+    #pc-module-2{
+        background-color: #F8F8F8;
+    }
+    .module p{
+        font-size: 16px;
+        line-height: 32px;
+    }
+    .module{
+        padding-bottom: 1.32rem;
+    }
+    .pc-module-title{
+        padding: 2px 0;
+        text-align: center;
+        border-top: 1px solid #EDEDED;
+        border-bottom:1px solid #EDEDED ;
+    }
+    .pc-module-title div{
+        color: #666666;
+        font-size: 14px;
+        display: inline-block;
+        padding: 18px 0;
+    }
+    .pc-module-title div:nth-child(3){
+        margin: 0 0.86rem 0 1rem;
+    }
+    .pc-module-title div:nth-child(1){
+        margin: 0 0.86rem 0 0;
+    }
+    .pc-module-title div:hover{
+        color: #FF6000;
+    }
+    .hasChoose{
+        color: #FF6000 !important;
+        border-bottom: 2px solid #FF6000;
+    }
+    .download h4{
+        font-size: 24px;
+        margin:55px 0 28px;
+    }
+    .pc-row-img img{
+        max-width: 100%;
+        max-height: 100%;
+    }
+    .pc-row-img{
+        position: relative;
+        text-align: center;
+        line-height: 280px;
+        height: 280px;
+        border: 1px solid #EEEEEE;
+    }
+    .pc-row-img .pc-down-hover{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        display: none;
+    }
+    .pc-down-hover div{
+        float: right;
+        margin-top: 20px;
+        margin-right: 20px;
+        width: 116px;
+        height: 44px;
+        text-align: center;
+        line-height: 44px;
+        color: #fff;
+        font-size: 16px;
+        background: linear-gradient(to right, #FF9900  , #FF6000);
+    }
+    .pc-row-img:hover .pc-down-hover{
+        display: block;
+        background-color: rgba(00,00,00,0.2);
+    }
+    .pc-row-p{
+        font-size: 16px;
+        padding: 16px 0;
+    }
+    .download{
+        overflow: hidden;
+    }
+    #video{
+        padding: 0.41rem 0;
+    }
+    .pc-video-img{
+        position: relative;
+        width: 100%;
+        height: 160px;
+        text-align: center;
+        line-height: 160px;
+    }
+    .pc-video-img img{
+        width: 100%;
+        height: 100%;
+    }
+    .pc-video-p1{
+        font-size: 14px;
+        padding: 10px;
+        margin: 0;
+    }
+    .pc-video-p2{
+        margin-bottom: 0.3rem;
+        color:#dbdbdb;
+    }
+    .pc-video-img:hover .pc-video-play{
+        background: rgba(00,00,00,0.3);
+    }
+    .pc-video-img:hover .pc-video-play img{
+        display: inline-block;
+    }
+    .pc-play:first-of-type .pc-video-img:hover .pc-video-play img{
+        display: none;
+    }
+    .pc-video-play{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    .pc-video-play img{
+        display: none;
+        width: 70px;
+        height: 70px;
+        line-height: 100%;
+        text-align: center;
+    }
+    .pc-video-play p{
+        line-height: 14px;
+        color: #fff;
+        position: absolute;
+        bottom: 5px;
+        right: 8px;
+    }
+    .pc-play:first-of-type .pc-video-img .pc-video-play div{
+        display: block;
+        width: 100%;
+        height: 100%;
+        font-size: 16px;
+        line-height: 160px;
+        color:#fff;
+        text-align: center;
+        background: rgba(00,00,00,0.3);
+    }
+    .pc-video-play div{
+        display: none;
+    }
+</style>
+<div class="pc-module-title" ng-show="show != 11">
+    <div ng-click="pageTransto(1)" ng-class="{'hasChoose':show == 11}">公司简介</div>
+    <div ng-click="pageTransto(2)" ng-class="{'hasChoose':show == 12}">资源下载</div>
+    <div ng-click="pageTransto(3)" ng-class="{'hasChoose':show == 13}">视频资源</div>
+    <div ng-click="pageTransto(4)" ng-class="{'hasChoose':show == 14}">领导团队</div>
+</div>
+<div id="company" ng-show="show == 11">
+    <div id="banner">
+        <img src="img/information/banner.png" >
+    </div>
+    <div id="pc-module-1" class="container module">
+        <h1>公司简介</h1>
+        <p>&nbsp; &nbsp; &nbsp; &nbsp;在当下互联网时代，每个行业都在思考一条怎样利用互联网模式和技术，让自己能在当下及未来依然能够高效发展的道路思考一条发展的道路，得名公司名称： 思发路而“思发路”的谐音得名品牌名称：48路浙江思发路网络科技有限公司由20家家纺品牌联合出资打造家纺类系统信息化全渠道平台，通过自建商城和第三方商 城作线上购买渠道，在全国设立网点嵌入云屏系统让线下更好的经营店面服务于线上线下消费者。旨在利用一切可以利用的互联网技术解决行业痛点，打造大型家居 售卖平台优质优价普惠消费者。</p>
+        <p>&nbsp; &nbsp; &nbsp; &nbsp;48路浙江思发路网络科技有限公司由20家家纺品牌联合出资打造家纺类系统信息化全渠道平台，通过自建商城和第三方商城作线上购买渠道，在全国设立网点嵌 入云屏系统让线下更好的经营店面服务于线上线下消费者。旨在利用一切可以利用的互联网技术解决行业痛点，打造大型家居售卖平台优质优价普惠消费者。</p>
+    </div>
+    <div id="pc-module-2" class="module">
+        <div class="container">
+            <h1>企业文化</h1>
+            <p>&nbsp; &nbsp; &nbsp; &nbsp;在当下互联网时代，每个行业都在思考一条怎样利用互联网模式和技术，让自己能在当下及未来依然能够高效发展的道路思考一条发展的道路，得名公司名称： 思发路而“思发路”的谐音得名品牌名称：48路浙江思发路网络科技有限公司由20家家纺品牌联合出资打造家纺类系统信息化全渠道平台，通过自建商城和第三方商 城作线上购买渠道，在全国设立网点嵌入云屏系统让线下更好的经营店面服务于线上线下消费者。旨在利用一切可以利用的互联网技术解决行业痛点，打造大型家居 售卖平台优质优价普惠消费者。</p>
+            <p>&nbsp; &nbsp; &nbsp; &nbsp;48路浙江思发路网络科技有限公司由20家家纺品牌联合出资打造家纺类系统信息化全渠道平台，通过自建商城和第三方商城作线上购买渠道，在全国设立网点嵌 入云屏系统让线下更好的经营店面服务于线上线下消费者。旨在利用一切可以利用的互联网技术解决行业痛点，打造大型家居售卖平台优质优价普惠消费者。</p>
+        </div>
+    </div>
+    <div id="pc-module-3" class="container module">
+        <h1>我们的愿景</h1>
+        <p>&nbsp; &nbsp; &nbsp; &nbsp;浙江思发络网络科技有限公司是一家20多家行业知名品牌企业联合，工厂行业多个技术专家、多个软装设计公司，以及全国各省优资渠道商，共同出资组建的公司。 他充分利用本行业的上、下游资源 ，形成的线上交易、线下服务完成的，线上、线下同时体验的网购平台。帮助参与的各上下游企业完成销售及工厂4.0模式的大数据化、 信息化管理。 企业本着公平、公正、公开；风险回报共担，进 退自由的原则。吸纳本行业上、下游有志之士，共同改变，创造行业新未来。</p>
+        <p>&nbsp; &nbsp; &nbsp; &nbsp;浙江思发络网络科技有限公司旗下48路家居网，是一家国内最专业，服务网店最多，品种花色最全，并可以DIY个性定制，线上线下同时体验的窗帘网购平台，消费 就有积分，消费越多，积分越多，买窗帘就上“48路家居网”！</p>
+    </div>
+</div>
+<div id="source" ng-show="show == 12" class="container">
+    <div class="banner">
+        <img src="img/information/resource.png" alt="">
+    </div>
+    <!--加盟商资源下载-->
+    <div class="download">
+        <h4>加盟商资源</h4>
+        <div>
+            <div class="col-sm-3">
+                <div class="pc-row-img">
+                    <img src="img/index/banner.png" alt="">
+                    <div class="pc-down-hover">
+                        <div>下载</div>
+                    </div>
+                </div>
+                <p class="pc-row-p">车贴</p>
+            </div>
+        </div>
+    </div>
+    <!--加盟商VI资源下载-->
+    <div class="download">
+        <h4>加盟商VI资源</h4>
+        <div>
+            <div class="col-sm-3">
+                <div class="pc-row-img">
+                    <img src="img/index/banner.png" alt="">
+                    <div class="pc-down-hover">
+                        <div>下载</div>
+                    </div>
+                </div>
+                <p class="pc-row-p">车贴</p>
+            </div>
+        </div>
+    </div>
+    <!--思发路相关证书下载-->
+    <div class="download">
+        <h4>思发路相关证书</h4>
+        <div>
+            <div class="col-sm-3">
+                <div class="pc-row-img">
+                    <img src="img/index/banner.png" alt="">
+                    <div class="pc-down-hover">
+                        <div>下载</div>
+                    </div>
+                </div>
+                <p class="pc-row-p">车贴</p>
+            </div>
+        </div>
+    </div>
+    <!--视频资源下载-->
+    <div class="download">
+        <h4>视频资源</h4>
+        <div>
+            <div class="col-sm-4">
+                <div class="pc-row-img">
+                    <img src="img/index/banner.png" alt="">
+                    <div class="pc-down-hover">
+                        <div>下载</div>
+                    </div>
+                </div>
+                <p class="pc-row-p">车贴</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="video" ng-show="show == 13" class="container">
+    <video width="100%" controls src="{{videoUrl}}" type="video/mp4" loop>
+        您的浏览器不支持 video 标签。
+    </video>
+    <div style="margin-top: 0.6rem;">
+        <div class="col-md-3 col-sm-4 col-xs-6 pc-play" ng-repeat="video in videoArr">
+            <div class="pc-video-img">
+                <img ng-src="{{video.img}}" alt="">
+                <div class="pc-video-play">
+                    <div>播放中...</div>
+                    <img src="img/information/play.png" ng-click="tansToPlay($index)">
+                    <p>07:26</p>
+                </div>
+            </div>
+            <p class="pc-video-p1">合伙人分享</p>
+            <p class="pc-video-p2">20107-10-22</p>
+        </div>
+    </div>
+</div>
+

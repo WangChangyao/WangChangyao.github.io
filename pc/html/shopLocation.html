@@ -1,0 +1,298 @@
+<style>
+    #allmap{
+        width: 100%;
+        height: 5.9rem;
+    }
+    .markWrap{
+        position: relative;
+        padding:0 6px;
+        text-align: center;
+        background-color: rgb(255, 150, 37);
+        border: 1px solid rgb(197, 127, 29);
+        min-width: 38px;
+    }
+    .markWrap:before{
+        content: "";
+        display: block;
+        position: absolute;
+        width: 15px;
+        height: 15px;
+        background: url("img/label.png") no-repeat ;bottom: -15px;
+        left: 15px;
+        background-size: 100% 300%;
+        z-index: 10000;
+    }
+    .markerlnglat{
+        width: 25px;
+        height: 25px;
+        position: absolute;
+        top:-12px;
+        left: -12px;
+    }
+    .marker{
+        color:#fff;
+        display: block;
+        font-size: 14px;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+    .pc-map{
+        position: relative;
+    }
+    .pc-show-info{
+        top: 0.7rem;
+        right: 0.4rem;
+        position: absolute;
+        z-index: 100;
+        width: 3.5rem;
+    }
+/*    .pc-wrap{
+        background-color: #fff;
+    }*/
+    .pc-show-info div:first-child{
+        background-color: #fff;
+        width: 100%;
+        text-align: center;
+    }
+    .pc-show-info div:first-child img{
+        width: 3.3rem;
+        height: 1.9rem;
+        margin-top: 0.1rem;
+    }
+    .pc-name{
+        font-size: 18px;
+        color: #333333;
+        text-align: left;
+        padding: 0.1rem;
+        margin: 0;
+    }
+    .pc-info{
+        color:#262626;
+        font-size: 12px;
+        line-height: 16px;
+        text-align: left;
+        padding: 0 0.1rem;
+    }
+    .pc-VR-btn button{
+        border: none;
+        outline: none;
+        width: 2.5rem;
+        height: 0.44rem;
+        background-color: #FF6000;
+        color: #fff;
+        font-size: 14px;
+        line-height: 0.44rem;
+        text-align: center;
+    }
+    .pc-VR-btn{
+        text-align: center;
+        padding-top: 0.2rem;
+    }
+    .pc-back-drop{
+        position: absolute;
+        z-index: 10;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(00,00,00,0.2);
+    }
+    .pc-hover-2wm{
+        overflow: hidden;
+       padding:0 0.1rem 0.1rem 0;
+    }
+    .pc-hover-2wm img{
+        width: 0.5rem !important;
+        height: 0.5rem !important;
+    }
+    .pc-hover-daohang{
+        position: absolute;
+        width: 3.5rem;
+        height: 100%;
+        top:0;
+        right: 0;
+        background-color: #fff;
+        z-index: -1;
+        text-align: center;
+        overflow: hidden;
+    }
+    .pc-hover-daohang p:first-of-type{
+        font-size: 16px;
+        padding: 0.27rem 0 0 0.2rem;
+        text-align: left;
+    }
+    .pc-hover-daohang #qrcode{
+        height: 1.7rem !important;
+        margin: 0.5rem 0 0.34rem;
+        text-align: center;
+    }
+   .pc-hover-daohang #qrcode img{
+        width: 1.7rem !important;
+        height: 100% !important;
+    }
+    .pc-hover-daohang #qrcode img{
+        display: none !important;
+    }
+    .pc-hover-daohang #qrcode img:last-of-type{
+        display: inline !important;
+    }
+    .pc-hover-daohang p:last-of-type{
+        font-size: 14px;
+        color: #878787;
+    }
+    .pc-hover-2wm:hover .pc-hover-daohang{
+        right: 4.5rem;
+        z-index: 100;
+        animation-name: leftGo;
+        animation-duration: 500ms;
+    }
+    .pc-show-info .pc-delete{
+        position: absolute;
+        width: 0.34rem;
+        height: 0.34rem;
+        background-image: url("img/close.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        top:-0.17rem;
+        right: -0.17rem;
+        z-index: 1000;
+    }
+    @keyframes leftGo {
+        0%{
+            right: 3.5rem;
+        }
+        100%{
+            right: 4.5rem;
+        }
+    }
+    @media screen and (max-width: 1500px) {
+        #allmap {
+            min-height: 390px;
+        }
+        .pc-show-info {
+            top: 0.4rem;
+        }
+    }
+    @media screen and (max-width: 800px) {
+        .pc-show-info {
+            top: 0.4rem;
+            min-width: 160px;
+        }
+         .pc-hover-daohang {
+             min-width: 160px;
+         }
+         .pc-shop-img {
+           min-height: 90px;
+           min-width: 150px;
+       }
+
+       .pc-VR-btn button {
+           min-width: 115px;
+           min-height: 20px;
+       }
+
+       .pc-hover-2wm:hover .pc-hover-daohang {
+           right: 190px;
+           z-index: 100;
+           animation-name: leftGo;
+           animation-duration: 500ms;
+       }
+
+       @keyframes leftGo {
+           0% {
+               right: 160px;
+           }
+           100% {
+               right: 190px;
+           }
+       }
+    }
+    .pc-location{
+        margin-bottom: 1rem;
+    }
+    .pc-location h1{
+        padding: 0.53rem;
+        font-size: 32px;
+        margin: 0;
+        text-align: center;
+    }
+    .pc-location .pc-province{
+        font-size: 0;
+    }
+    .pc-location .pc-city{
+        display: inline-block;
+        width: 12.5%;
+        height: 0.65rem;
+        padding: 10px;
+    }
+    .pc-city div{
+        font-size: 14px;
+        background-color: #F3F3F3;
+        height: 100%;
+        line-height: calc(0.65rem - 20px);
+        text-align: center;
+    }
+    .map-show{
+        display: none;
+    }
+</style>
+<div>
+    <div class="pc-map">
+        <div class="pc-back-drop map-show" ng-click="hideInfo()"></div>
+        <div id="allmap"></div>
+        <div class="pc-show-info map-show">
+            <div class="pc-wrap">
+                <img src="img/index/banner.png" class="pc-shop-img">
+                <p class="pc-name">英格登堡</p>
+                <p class="pc-info">门店地址：<span>浙江省杭州市余杭区临平大道633号3幢11楼余杭区临平余杭区临平</span></p>
+                <p class="pc-info">电话号码：<span>18752304888</span></p>
+                <p class="pc-info">工作时间：<span>周一至周五09:00-18:00</span></p>
+                <div class="pc-VR-btn">
+                    <button>VR门店展示</button>
+                </div>
+                <div class="pc-hover-2wm">
+                    <img src="img/hover-wm.png" class="pull-right">
+                    <div class="pc-hover-daohang">
+                        <p>手机扫码，获取导航</p>
+                        <div id="qrcode"></div>
+                        <p>手机<span style="color: #FF6000;">扫一扫</span>，获取店铺导航</p>
+                    </div>
+                </div>
+            </div>
+            <div class="pc-delete" ng-click="hideInfo()"></div>
+        </div>
+    </div>
+    <div class="pc-location container">
+        <h1>已加盟门店分布城市</h1>
+        <div class="pc-province">
+            <div class="pc-city">
+                <div>湖北省</div>
+            </div>
+            <div class="pc-city">
+                <div>湖北省</div>
+            </div>
+            <div class="pc-city">
+                <div>湖北省</div>
+            </div>
+            <div class="pc-city">
+                <div>湖北省</div>
+            </div>
+            <div class="pc-city">
+                <div>湖北省</div>
+            </div>
+            <div class="pc-city">
+                <div>湖北省</div>
+            </div>
+            <div class="pc-city">
+                <div>湖北省</div>
+            </div>
+            <div class="pc-city">
+                <div>湖北省</div>
+            </div>
+            <div class="pc-city">
+                <div>湖北省</div>
+            </div>
+            <div class="pc-city">
+                <div>湖北省</div>
+            </div>
+        </div>
+    </div>
+</div>

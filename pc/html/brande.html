@@ -1,0 +1,237 @@
+<style>
+    #banner img{
+      width: 100%;
+    }
+    #brande,.pc-add-us{
+        padding: 0.5rem;
+    }
+    .pc-add-us{
+        background-color: #F8F8F8;
+    }
+    h1{
+        font-size: 32px;
+        margin-bottom: 0.5rem;
+        text-align: center;
+    }
+    .pc-kind-brand{
+        display: inline-block;
+        width: 20%;
+        padding: 10px;
+    }
+    @media screen and (max-width: 650px){
+        .pc-kind-brand{
+            width: 33.33333%;
+        }
+    }
+    @media screen and (max-width: 400px){
+        .pc-kind-brand{
+            width:50%;
+        }
+    }
+    .pc-kind-brand .pc-brand-module{
+        border: 1px solid #dbdbdb;
+        width: 100% ;
+        text-align: center;
+        position: relative;
+    }
+    .pc-brand-module .pc-hover-show{
+        display: none;
+    }
+    .pc-kind-brand:hover .pc-brand-module .pc-hover-show{
+        display: block;
+        background-color: #fff;
+        position: absolute;
+        width: 260px;
+        top: 0;
+        left: 0;
+        box-shadow:  0 0 10px #dbdbdb;
+        z-index: 1000;
+        overflow: hidden;
+    }
+    .pc-kind-brand .pc-module-img{
+        width: 100%;
+        padding: 15px;
+    }
+    .pc-input{
+        text-align: center;
+    }
+    .pc-input label{
+        font-size: 16px;
+        margin-right: 13px;
+        color: #333333;
+    }
+    .pc-input input,.pc-input textarea{
+        margin-bottom: 30px;
+        width: 540px;
+        height: 46px;
+        padding: 10px 0 10px 15px;
+        border: 1px solid #cccccc;
+    }
+    .pc-input textarea{
+        resize: none;
+        height: 180px;
+        vertical-align: top;
+    }
+    .pc-btn-submit{
+        width: 204px;
+        height: 48px;
+        display: inline-block;
+        line-height: 48px;
+        text-align: center;
+        margin:30px 0 17px;
+        background-color: #FF6000;
+        color:#fff;
+        cursor: pointer;
+        font-size: 14px;
+    }
+    .pc-hover-show div{
+        text-align: center;
+        padding: 0 20px;
+    }
+    .pc-hover-show img{
+        max-width: 200px;
+        max-height: 97px;
+        margin: 22px 0 16px;
+    }
+    .pc-hover-show p{
+        font-size: 14px;
+        line-height: 24px;
+        max-height: 120px;
+        overflow: hidden;
+        text-align: left;
+    }
+    .pc-hover-show button{
+        outline: none;
+        width: 200px;
+        height: 48px;
+        line-height: 48px;
+        border: 1px solid #FF6000;
+        color:#FF6000;
+        font-size: 14px;
+        margin: 41px 0 12px;
+        background-color: #fff;
+    }
+    .pc-ask{
+        font-size: 14px;
+        color: #333333;
+    }
+    ::-webkit-input-placeholder{
+        color:#cccccc;
+    }
+    :-moz-placeholder{
+        color:#cccccc;
+    }
+    ::-moz-placeholder{
+        color:#cccccc;
+    }
+    :-ms-input-placeholder{
+        color:#cccccc;
+    }
+</style>
+<div id="banner">
+    <img src="img/brande/banner.png">
+</div>
+<div id="brande" class="container">
+   <h1>全部入驻品牌</h1>
+    <div style="font-size: 0">
+        <div class="pc-kind-brand">
+            <div class="pc-brand-module">
+                <img src="img/brande.png" class="pc-module-img">
+                <div class="pc-hover-show">
+                    <div>
+                        <img src="img/brande.png" >
+                        <p>始创于2000年10月的杭州大浪淘纱 布业有限公司，坐落在浙江省公 大楼、宽敞的厂房和优美的环境…</p>
+                        <button>查看更多</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="pc-kind-brand">
+            <div class="pc-brand-module">
+                <img src="img/brande.png" class="pc-module-img">
+                <div class="pc-hover-show">
+                    <div>
+                        <img src="img/brande/banner.png" >
+                        <p>始创于2000年10月的杭州大浪淘纱 布业有限公司，坐落在浙江省公 大楼、宽敞的厂房和优美的环境…</p>
+                        <button>查看更多</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="pc-kind-brand">
+            <div class="pc-brand-module">
+                <img src="img/brande.png" class="pc-module-img">
+                <div class="pc-hover-show">
+                    <div>
+                        <img src="img/information/banner.png" >
+                        <p>始创于2000年10月的杭州大浪淘纱 布业有限公司，坐落在浙江省公 大楼、宽敞的厂房和优美的环境…</p>
+                        <button>查看更多</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="pc-kind-brand">
+            <div class="pc-brand-module">
+                <img src="img/brande.png" class="pc-module-img">
+                <div class="pc-hover-show">
+                    <div>
+                        <img src="img/information/play.png" >
+                        <p>始创于2000年10月的杭州大浪淘纱 布业有限公司，坐落在浙江省公 大楼、宽敞的厂房和优美的环境…</p>
+                        <button>查看更多</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="pc-kind-brand">
+            <div class="pc-brand-module">
+                <img src="img/brande.png" class="pc-module-img">
+                <div class="pc-hover-show">
+                    <div>
+                        <img src="img/information/play.png" >
+                        <p>始创于2000年10月的杭州大浪淘纱 布业有限公司，坐落在浙江省公 大楼、宽敞的厂房和优美的环境…</p>
+                        <button>查看更多</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="pc-kind-brand">
+            <div class="pc-brand-module">
+                <img src="img/brande.png" class="pc-module-img">
+                <div class="pc-hover-show">
+                    <div>
+                        <img src="img/information/play.png" >
+                        <p>始创于2000年10月的杭州大浪淘纱 布业有限公司，坐落在浙江省公 大楼、宽敞的厂房和优美的环境…于2000年10月的杭州大浪淘纱 布业有限公司，坐落在浙江省公 大楼、宽敞的厂房和优美于2000年10月的杭州大浪淘纱 布业有限公司，坐落在浙江省公 大楼、宽敞的厂房和优美于2000年10月的杭州大浪淘纱 布业有限公司，坐落在浙江省公 大楼、宽敞的厂房和优美于2000年10月的杭州大浪淘纱 布业有限公司，坐落在浙江省公 大楼、宽敞的厂房和优美</p>
+                        <button ng-click="showDetail(id)">查看更多</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="pc-add-us">
+    <h1>加入我们</h1>
+    <div class="container">
+        <form>
+            <div class="pc-input">
+                <label for="name" >品牌厂商:</label>
+                <input type="text" id="name" placeholder="请输入品牌名称" ng-model="name" autocomplete="false">
+            </div>
+            <div class="pc-input">
+                <label for="phone">手机号码:</label>
+                <input type="text" id="phone" placeholder="手机号码" ng-model="phone" autocomplete="false">
+            </div>
+            <div class="pc-input">
+                <label for="emial" >联系邮箱:</label>
+                <input type="text" id="emial" placeholder="邮箱地址" ng-model="emial">
+            </div>
+            <div class="pc-input">
+                <label for="more" style="margin-top: 10px">补充说明:</label>
+                <textarea id="more" placeholder="意见或建议" ng-model="suggest"></textarea>
+            </div>
+            <div class="pc-input">
+                <div class="pc-btn-submit" ng-click="submitInfo()">提交申请</div>
+                <div class="pc-ask">入驻咨询：400-1684-848</div>
+            </div>
+        </form>
+    </div>
+</div>

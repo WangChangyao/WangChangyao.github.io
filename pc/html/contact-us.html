@@ -1,0 +1,146 @@
+<style>
+    #banner img{
+        width: 100%;
+    }
+    #infor{
+        background-color: #F1F1F5;
+    }
+    #infor h1{
+        font-size: 32px;
+        padding: 0.5rem;
+        text-align: center;
+        margin: 0;
+    }
+    .pc-information{
+        padding:0 0 0.5rem 0;
+        text-align: center;
+        background-color: #fff;
+    }
+    .pc-input{
+        text-align: center;
+    }
+    .pc-input label{
+        font-size: 16px;
+        margin-right: 13px;
+        color: #333333;
+    }
+    .pc-input input,.pc-input textarea{
+        margin-bottom: 30px;
+        width: 540px;
+        height: 46px;
+        padding: 10px 0 10px 15px;
+        border: 1px solid #cccccc;
+    }
+    .pc-input textarea{
+        resize: none;
+        height: 180px;
+        vertical-align: top;
+    }
+    .pc-btn-submit{
+        width: 204px;
+        height: 48px;
+        display: inline-block;
+        line-height: 48px;
+        text-align: center;
+        margin:30px 0 17px;
+        background-color: #FF6000;
+        color:#fff;
+        cursor: pointer;
+        font-size: 14px;
+    }
+    .pc-hover-show div{
+        text-align: center;
+        padding: 0 20px;
+    }
+    .pc-hover-show img{
+        max-width: 2rem;
+        max-height: 0.97rem;
+        margin: 22px 0 16px;
+    }
+    .pc-hover-show p{
+        font-size: 14px;
+        line-height: 24px;
+        max-height: 120px;
+        overflow: hidden;
+        text-align: left;
+    }
+    .pc-hover-show button{
+        outline: none;
+        width: 2.04rem;
+        height: 0.48rem;
+        line-height: 0.48rem;
+        border: 1px solid #FF6000;
+        color:#FF6000;
+        font-size: 14px;
+        margin: 0.41rem 0 0.12rem;
+        background-color: #fff;
+    }
+    .pc-ask{
+        font-size: 14px;
+        color: #333333;
+    }
+    ::-webkit-input-placeholder{
+        color:#cccccc;
+    }
+    :-moz-placeholder{
+        color:#cccccc;
+    }
+    ::-moz-placeholder{
+        color:#cccccc;
+    }
+    :-ms-input-placeholder{
+        color:#cccccc;
+    }
+    .pc-person{
+        border-bottom: 1px solid #CCCCCC;
+        margin-bottom: 0.5rem;
+    }
+    .pc-person p{
+        display: inline-block;
+        margin: 0;
+        padding: 0.34rem;
+        color: #999999;
+        font-size: 24px;
+    }
+    .pc-person .pc-active{
+        color:#FF6000;
+        border-bottom: 2px solid #FF6000;
+    }
+</style>
+<div>
+    <div id="banner">
+        <img src="img/callus.png" alt="">
+    </div>
+    <div id="infor">
+        <h1>联系我们</h1>
+        <div class="container pc-information">
+            <div class="pc-person">
+                <p class="pc-active">消费者</p>
+                <p>经销商</p>
+                <p>厂商入驻</p>
+            </div>
+            <form>
+                <div class="pc-input">
+                    <label for="name" >品牌厂商:</label>
+                    <input type="text" id="name" placeholder="请输入品牌名称" ng-model="name" autocomplete="false">
+                </div>
+                <div class="pc-input">
+                    <label for="phone">手机号码:</label>
+                    <input type="text" id="phone" placeholder="手机号码" ng-model="phone" autocomplete="false">
+                </div>
+                <div class="pc-input">
+                    <label for="emial" >联系邮箱:</label>
+                    <input type="text" id="emial" placeholder="邮箱地址" ng-model="emial">
+                </div>
+                <div class="pc-input">
+                    <label for="more" style="margin-top: 10px">补充说明:</label>
+                    <textarea id="more" placeholder="意见或建议" ng-model="suggest"></textarea>
+                </div>
+                <div class="pc-input">
+                    <div class="pc-btn-submit" ng-click="submitInfo()">提交申请</div>
+                    <div class="pc-ask">入驻咨询：400-1684-848</div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

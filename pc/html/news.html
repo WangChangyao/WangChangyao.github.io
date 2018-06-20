@@ -1,0 +1,215 @@
+<style>
+    #banner img{
+        width: 100%;
+    }
+    .pc-module-title{
+        padding: 2px 0;
+        text-align: center;
+        border-top: 1px solid #EDEDED;
+        border-bottom:1px solid #EDEDED ;
+    }
+    .pc-module-title div{
+        color: #666666;
+        font-size: 14px;
+        display: inline-block;
+        padding: 18px 0;
+    }
+    .pc-module-title div:nth-child(3){
+        margin: 0 0.86rem 0 1rem;
+    }
+    .pc-module-title div:nth-child(1){
+        margin: 0 0.86rem 0 0;
+    }
+    .pc-module-title div:hover{
+        color: #FF6000;
+    }
+    .hasChoose{
+        color: #FF6000 !important;
+        border-bottom: 2px solid #FF6000;
+    }
+    .pc-4-news{
+        font-size: 0;
+        position: relative;
+    }
+    .pc-4-news div{
+        padding: 21px 0;
+        display: inline-block;
+        text-align: center;
+        font-size: 14px;
+        position: relative;
+    }
+    .activeIndex:before{
+        content: "";
+        display: block;
+        position: absolute;
+        width: 0;
+        height: 0;
+        border: 16px solid rgba(00,00,00,0);
+        border-bottom-color:#FF6000 ;
+        top: -32px;
+        z-index: 1000;
+        left: 50%;
+        margin-left: -8px;
+    }
+    .activeIndex div{
+        color:#FF6000;
+    }
+    .pc-new-title{
+        width: 19%;
+        vertical-align: middle;
+    }
+    .pc-new-title div{
+        overflow: hidden;
+        width: 100%;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        padding: 0;
+        cursor: pointer;
+    }
+    .pc-new-arrow{
+        width: 8%;
+        vertical-align: middle;
+    }
+    .pc-lastet-news h1{
+        font-size: 32px;
+        padding: 0.5rem 0;
+        margin: 0;
+    }
+    .pc-one-new{
+        background-color: #fff;
+        margin-bottom: 20px;
+    }
+    .pc-one-new img{
+        width:280px;
+        height: 180px;
+        vertical-align: middle;
+    }
+    .pc-right-detail{
+        display: inline-block;
+        padding-left: 0.3rem;
+        width: 60%;
+        vertical-align: middle;
+    }
+    @media screen and (max-width: 760px) {
+        .pc-one-new{
+            text-align: center;
+        }
+        .pc-right-detail{
+            width: 100%;
+        }
+        .pc-right-detail p{
+            text-align: left;
+        }
+    }
+    .pc-right-detail h4{
+        font-size: 20px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+    .pc-right-detail h6{
+        color:#999999;
+        font-size: 14px;
+        line-height: 26px;
+    }
+    .pc-right-detail p{
+        color:#666666;
+        font-size: 14px;
+        line-height: 26px;
+        max-height: 55px;
+        overflow: hidden;
+    }
+    .pc-lastet-news{
+        background-color: #F8F8F8;
+    }
+    #jqPaginator{
+        padding: 0.6rem 0 0.8rem;
+        text-align: center;
+    }
+    #pagination li a{
+        border-radius: 50%;
+        margin: 0 4px;
+    }
+    #pagination li.prev a,#pagination li.next a{
+        border-radius:17px 17px;
+        margin: 0 10px;
+    }
+    .hasChoose{
+       color:#FF6000;
+        border-bottom: 2px solid #FF6000;
+    }
+</style>
+<div style="min-width: 465px">
+    <div>
+        <div class="pc-module-title">
+            <div ng-init="showNew = 1" ng-click="showNew = 1" ng-class="{'hasChoose':showNew == 1}">首页</div>
+            <div ng-click="showNew = 2" ng-class="{'hasChoose':showNew == 2}">企业动态</div>
+            <div ng-click="showNew = 3" ng-class="{'hasChoose':showNew == 3}">影像记录</div>
+        </div>
+        <div id="banner">
+            <!--<img src="img/Mask.png" alt="">-->
+            <div class="swiper-container" ui-banner ui-type="1">
+                <div class="swiper-wrapper">
+                </div>
+                <div class="swiper-pagination" style="display: none;"></div>
+            </div>
+        </div>
+        <div class="pc-4-news container" ng-init="activeIndex = 0">
+            <div class="pc-new-title" ng-class="{'activeIndex':activeIndex == 0}" ng-click="transToBanner(0)">
+                <div>杭州市余杭48路第八次招商大会</div>
+            </div>
+            <div class="pc-new-arrow">/</div>
+            <div class="pc-new-title" ng-class="{'activeIndex':activeIndex == 1}" ng-click="transToBanner(1)">
+                <div>杭州市余杭48路第八次招商大会</div>
+            </div>
+            <div class="pc-new-arrow">/</div>
+            <div class="pc-new-title" ng-class="{'activeIndex':activeIndex == 2}" ng-click="transToBanner(2)">
+                <div>杭州市余杭48路第八次招商大会</div>
+            </div>
+            <div class="pc-new-arrow">/</div>
+            <div class="pc-new-title" ng-class="{'activeIndex':activeIndex == 3}" ng-click="transToBanner(3)">
+                <div>杭州市余杭48路第八次招商大会</div>
+            </div>
+        </div>
+    </div>
+    <div class="pc-lastet-news">
+        <div class="container">
+            <h1>最新资讯</h1>
+            <div class="pc-one-new">
+                <img src="img/index/banner.png">
+                <div class="pc-right-detail">
+                    <h4>人民日报三问房地产调控:房子如何保障住、防止炒?</h4>
+                    <h6>[企业动态]</h6>
+                    <p ui-text>国务院发展研究中心市场研究所研究员任兴洲认为，从形势上看，房地产市场的稳定性在提升，但就特大城市、 热点城市来看，供需矛盾依然存在，投资投机冲动依然存在，短期内仍不能放松调控，防风险放在重要位置。</p>
+                </div>
+            </div>
+            <div class="pc-one-new">
+                <img src="img/index/banner.png">
+                <div class="pc-right-detail">
+                    <h4>人民日报三问房地产调控:房子如何保障住、防止炒?</h4>
+                    <h6>[企业动态]</h6>
+                    <p ui-text>国务院发展研究中心市场研究所研究员任兴洲认为，从形势上看，房地产市场的稳定性在提升，但就特大城市、 热点城市来看，供需矛盾依然存在，投资投机冲动依然存在，短期内仍不能放松调控，防风险放在重要位置。</p>
+                </div>
+            </div>
+            <div class="pc-one-new">
+                <img src="img/index/banner.png">
+                <div class="pc-right-detail">
+                    <h4>人民日报三问房地产调控:房子如何保障住、防止炒?</h4>
+                    <h6>[企业动态]</h6>
+                    <p ui-text>国务院发展研究中心市场研究所研究员任兴洲认为，从形势上看，房地产市场的稳定性在提升，但就特大城市、 热点城市来看，供需矛盾依然存在，投资投机冲动依然存在，短期内仍不能放松调控，防风险放在重要位置。</p>
+                </div>
+            </div>
+            <div class="pc-one-new">
+                <img src="img/index/banner.png">
+                <div class="pc-right-detail">
+                    <h4>人民日报三问房地产调控:房子如何保障住、防止炒?</h4>
+                    <h6>[企业动态]</h6>
+                    <p ui-text>国务院发展研究中心市场研究所研究员任兴洲认为，从形势上看，房地产市场的稳定性在提升，但就特大城市、 热点城市来看，供需矛盾依然存在，投资投机冲动依然存在，短期内仍不能放松调控，防风险放在重要位置。</p>
+                </div>
+            </div>
+            <div id="jqPaginator">
+                <div class="pagination" id="pagination"></div>
+            </div>
+        </div>
+    </div>
+</div>
